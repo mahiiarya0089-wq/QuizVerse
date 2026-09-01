@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuizVerse — Knowledge Arena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<!-- ══════════ HOME ══════════ -->
+<div id="screen-home" class="screen active">
+  <div class="bg-grid"></div>
+  <div class="hero">
+    <div class="hero-badge">🎓 College Quiz Platform</div>
+    <h1 class="hero-title">Quiz<span class="accent">Verse</span></h1>
+    <p class="hero-sub">Test your knowledge across Science, History, Technology &amp; Mathematics.<br>15 questions · 60 seconds each · Instant performance report.</p>
+    <button class="btn-start" onclick="showCategories()">Begin Challenge <span>→</span></button>
+  </div>
+  <div class="floating-icons">
+    <span style="--d:0s;  --x:10%;--y:20%">🔬</span>
+    <span style="--d:.5s; --x:80%;--y:15%">📜</span>
+    <span style="--d:1s;  --x:15%;--y:75%">💻</span>
+    <span style="--d:1.5s;--x:85%;--y:70%">🔢</span>
+    <span style="--d:2s;  --x:50%;--y:8%">⭐</span>
+    <span style="--d:2.5s;--x:5%; --y:50%">🏆</span>
+    <span style="--d:3s;  --x:93%;--y:45%">💡</span>
+  </div>
+</div>
+
+<!-- ══════════ CATEGORIES ══════════ -->
+<div id="screen-categories" class="screen">
+  <div class="bg-grid"></div>
+  <div class="container">
+    <button class="btn-back" onclick="showHome()">← Back</button>
+    <div class="section-header">
+      <h2>Choose Your Arena</h2>
+      <p>Select a category to start your 15-question challenge</p>
+    </div>
+    <div id="categories-grid" class="categories-grid"></div>
+  </div>
+</div>
+
+<!-- ══════════ QUIZ ══════════ -->
+<div id="screen-quiz" class="screen">
+  <div class="quiz-header">
+    <div class="quiz-meta">
+      <span id="quiz-cat-label">Science 🔬</span>
+      <span class="dot">·</span>
+      <span id="quiz-prog-label">Question 1 of 15</span>
+    </div>
+    <div class="quiz-timer-wrap">
+      <svg class="timer-ring" viewBox="0 0 60 60">
+        <circle class="ring-bg"   cx="30" cy="30" r="26"/>
+        <circle class="ring-fill" cx="30" cy="30" r="26" id="timer-ring"/>
+      </svg>
+      <span id="timer-text" class="timer-text">60</span>
+    </div>
+    <button class="btn-quit" onclick="confirmQuit()">✕ Quit</button>
+  </div>
+
+  <div class="quiz-body">
+    <div class="progress-bar-wrap"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="question-card">
+      <div class="question-number" id="question-number">01</div>
+      <h2 class="question-text" id="question-text">Loading…</h2>
+      <div class="options-grid" id="options-container"></div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn-skip" onclick="skipQuestion()">Skip →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ LOADING ══════════ -->
+<div id="screen-loading" class="screen">
+  <div class="loading-wrap">
+    <div class="loader-ring"></div>
+    <p>Preparing your quiz…</p>
+  </div>
+</div>
+
+<!-- ══════════ REPORT ══════════ -->
+<div id="screen-report" class="screen">
+  <div class="container report-container">
+
+    <div class="report-hero" id="report-hero">
+      <div class="report-grade"       id="report-grade">A</div>
+      <div class="report-grade-label" id="report-grade-label">Excellent!</div>
+      <div class="report-category"    id="report-category">Science 🔬</div>
+    </div>
+
+    <div class="score-cards">
+      <div class="score-card correct"><div class="score-num" id="sc-correct">0</div><div class="score-lbl">Correct</div></div>
+      <div class="score-card wrong">  <div class="score-num" id="sc-wrong">0</div>  <div class="score-lbl">Wrong</div></div>
+      <div class="score-card skipped"><div class="score-num" id="sc-skipped">0</div><div class="score-lbl">Skipped</div></div>
+      <div class="score-card score">  <div class="score-num" id="sc-score">0%</div> <div class="score-lbl">Score</div></div>
+    </div>
+
+    <div class="avg-time-bar">
+      <span>⏱ Average time per question</span>
+      <strong id="avg-time">—</strong>
+    </div>
+
+    <div class="report-section-title">Question Breakdown</div>
+    <div id="question-breakdown" class="breakdown-list"></div>
+
+    <div class="report-actions">
+      <button class="btn-retry" onclick="retryQuiz()">↺ Retry Quiz</button>
+      <button class="btn-home"  onclick="showHome()">⌂ Home</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ QUIT MODAL ══════════ -->
+<div id="quit-modal" class="modal-overlay hidden">
+  <div class="modal-box">
+    <h3>Quit Quiz?</h3>
+    <p>Your progress will be lost.</p>
+    <div class="modal-actions">
+      <button onclick="closeQuit()">Continue</button>
+      <button class="danger" onclick="goHome()">Yes, Quit</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

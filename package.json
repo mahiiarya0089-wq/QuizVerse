@@ -1,0 +1,17 @@
+{
+  "name": "quizverse",
+  "version": "1.0.0",
+  "description": "QuizVerse —  college Platform (Node.js + HTML/CSS/JS)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npx nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  },
+  "keywords": ["quiz", "education", "college", "nodejs"],
+  "author": "College Project",
+  "license": "MIT"
+}
