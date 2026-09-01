@@ -1,83 +1,64 @@
-# 🎓 QuizVerse — Node.js Edition (No Python)
+# 🎓 QuizVerse
 
-Full-stack quiz platform using **only HTML + CSS + JavaScript + Node.js**.  
-Zero external dependencies — runs on Node.js built-in `http` module.
+### Interactive College Quiz Platform
+
+QuizVerse is a full-stack web-based quiz platform designed to provide students with an interactive way to test their knowledge.
+
+The application provides an engaging quiz experience with different categories, timed questions, automatic scoring, and performance evaluation.
 
 ---
 
-## 📁 Project Structure
+## ✨ Features
 
-```
-quizverse-node/
-├── server.js           ← Node.js backend (API + static file server)
+-  Multiple quiz categories
+-  Timed quiz experience
+-  Interactive questions
+-  Automatic score calculation
+-  Performance evaluation
+-  Responsive user interface
+-  Node.js backend
+-  REST API integration
+-  Clean and user-friendly interface
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+
+- Node.js
+- HTTP module
+- REST API
+
+### Development Tools
+
+- Git
+- GitHub
+- Visual Studio Code
+- npm
+
+---
+
+## 📂 Project Structure
+
+```text
+QuizVerse/
+│
+├── public/
+│   ├── index.html
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── main.js
+│
+├── server.js
 ├── package.json
-├── README.md
-└── public/
-    ├── index.html      ← Single-page app (5 screens)
-    ├── css/
-    │   └── style.css   ← Full design system
-    └── js/
-        └── main.js     ← All frontend logic
-```
-
----
-
-## ⚙️ Setup & Run
-
-### Requirements
-- Node.js v16 or higher (no npm install needed — zero dependencies!)
-
-### Start the server
-```bash
-node server.js
-```
-
-### Open in browser
-```
-http://localhost:3000
-```
-
-That's it. No `npm install`, no Python, no virtual environments.
-
----
-
-## 🌐 API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/categories` | List all 4 quiz categories |
-| GET | `/api/quiz/:category` | Get 15 questions for a category |
-| POST | `/api/submit` | Submit answers, receive scored report |
-
----
-
-## 🧠 Quiz Content
-
-| Category | Questions | Timer |
-|----------|-----------|-------|
-| 🔬 Science | 15 | 60s each |
-| 📜 History | 15 | 60s each |
-| 💻 Technology | 15 | 60s each |
-| 🔢 Mathematics | 15 | 60s each |
-
----
-
-## 📊 Grading
-
-| Score | Grade |
-|-------|-------|
-| 80–100% | A — Excellent! |
-| 60–79%  | B — Good Job! |
-| 40–59%  | C — Keep Practicing! |
-| 0–39%   | D — Needs Improvement |
-
----
-
-## 🛠 Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Frontend | HTML5, CSS3, Vanilla JS (ES6+) |
-| Backend | Node.js built-in `http` module |
-| Fonts | Syne + DM Sans (Google Fonts) |
-| Dependencies | **None** |
+├── package-lock.json
+├── .gitignore
+└── README.md
