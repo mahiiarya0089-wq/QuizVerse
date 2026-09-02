@@ -182,23 +182,6 @@ http://localhost:3000
 
 ---
 
-## 📸 Screenshots
-
-Screenshots of the application will be added here.
-
-### 🏠 Home Page
-
-*Add screenshot here*
-
-### 📝 Quiz Interface
-
-*Add screenshot here*
-
-### 🏆 Results Page
-
-*Add screenshot here*
-
----
 
 ## 🚀 Future Improvements
 
