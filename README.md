@@ -182,6 +182,24 @@ http://localhost:3000
 
 ---
 
+<<<<<<< HEAD
+=======
+## 📸 Screenshots
+
+### 🏠 Home Page
+![QuizVerse Home Page](screenshots/home.png)
+
+### 📚 Quiz Categories
+![Quiz Categories](screenshots/categories.png)
+
+### ❓ Quiz Interface
+![Quiz Interface](screenshots/quiz.png)
+
+### 🏆 Quiz Result
+![Quiz Result](screenshots/result.png)
+
+---
+>>>>>>> 8ee9d9e (Add project screenshots to README)
 
 ## 🚀 Future Improvements
 
