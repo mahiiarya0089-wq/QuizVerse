@@ -1,83 +1,244 @@
-# 🎓 QuizVerse — Node.js Edition (No Python)
+# 🎓 QuizVerse – Interactive Quiz Platform
 
-Full-stack quiz platform using **only HTML + CSS + JavaScript + Node.js**.  
-Zero external dependencies — runs on Node.js built-in `http` module.
+QuizVerse is a full-stack interactive quiz platform designed to help students test and improve their knowledge through engaging, timed quizzes.
+
+Users can choose a quiz category, answer questions within a given time limit, submit their answers, and instantly receive their score and performance evaluation.
 
 ---
 
-## 📁 Project Structure
+## 🎯 Project Objective
 
+The main objective of QuizVerse is to provide a simple and interactive platform where students can:
+
+*  Practice different subjects
+*  Test their knowledge
+*  Answer questions within a time limit
+*  Receive their score automatically
+*  Evaluate their quiz performance
+
+---
+
+## ✨ Features
+
+*  Multiple quiz categories
+*  Multiple-choice questions
+*  Timed quizzes
+*  Automatic score calculation
+*  Instant performance evaluation
+*  Quiz restart functionality
+*  REST API-based backend
+*  Responsive and user-friendly interface
+
+### Available Categories
+
+*  Science
+*  History
+*  Technology
+*  Mathematics
+
+Each category contains multiple quiz questions designed for practice and knowledge testing.
+
+---
+
+## 🏗️ Application Architecture
+
+QuizVerse follows a simple client-server architecture:
+
+```text
+                  👤 User
+                    │
+                    ▼
+             ┌──────────────┐
+             │ Web Interface│
+             │ HTML/CSS/JS  │
+             └──────┬───────┘
+                    │
+                    ▼
+             ┌──────────────┐
+             │   REST API   │
+             │   Node.js    │
+             └──────┬───────┘
+                    │
+                    ▼
+             ┌──────────────┐
+             │ Quiz & Score │
+             │    Logic     │
+             └──────────────┘
 ```
-quizverse-node/
-├── server.js           ← Node.js backend (API + static file server)
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Development Tools
+
+* Visual Studio Code
+* Git
+* GitHub
+* npm
+
+---
+
+## 📂 Project Structure
+
+```text
+QuizVerse/
+│
+├── public/
+│   ├── index.html
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── main.js
+│
+├── server.js
 ├── package.json
-├── README.md
-└── public/
-    ├── index.html      ← Single-page app (5 screens)
-    ├── css/
-    │   └── style.css   ← Full design system
-    └── js/
-        └── main.js     ← All frontend logic
+├── package-lock.json
+└── README.md
 ```
 
 ---
 
-## ⚙️ Setup & Run
+## 🔌 API Endpoints
 
-### Requirements
-- Node.js v16 or higher (no npm install needed — zero dependencies!)
+QuizVerse provides REST API endpoints for handling quiz data and score submission.
 
-### Start the server
+### Get Quiz Categories
+
+```http
+GET /api/categories
+```
+
+Returns the available quiz categories.
+
+### Get Quiz Questions
+
+```http
+GET /api/quiz/:category
+```
+
+Returns questions for the selected category.
+
+Example:
+
+```http
+GET /api/quiz/technology
+```
+
+### Submit Quiz
+
+```http
+POST /api/submit
+```
+
+Accepts the user's answers and calculates the final score.
+
+---
+
+## ⚙️ How to Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/mahiiarya0089-wq/QuizVerse.git
+```
+
+### 2. Open the project
+
+```bash
+cd QuizVerse
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the server
+
 ```bash
 node server.js
 ```
 
-### Open in browser
-```
+### 5. Open the application
+
+Open your browser and visit:
+
+```text
 http://localhost:3000
 ```
 
-That's it. No `npm install`, no Python, no virtual environments.
+---
+
+## 📸 Screenshots
+
+Screenshots of the application will be added here.
+
+### 🏠 Home Page
+
+*Add screenshot here*
+
+### 📝 Quiz Interface
+
+*Add screenshot here*
+
+### 🏆 Results Page
+
+*Add screenshot here*
 
 ---
 
-## 🌐 API Endpoints
+## 🚀 Future Improvements
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/categories` | List all 4 quiz categories |
-| GET | `/api/quiz/:category` | Get 15 questions for a category |
-| POST | `/api/submit` | Submit answers, receive scored report |
+The following features can be added in future versions:
 
----
-
-## 🧠 Quiz Content
-
-| Category | Questions | Timer |
-|----------|-----------|-------|
-| 🔬 Science | 15 | 60s each |
-| 📜 History | 15 | 60s each |
-| 💻 Technology | 15 | 60s each |
-| 🔢 Mathematics | 15 | 60s each |
+*  User registration and login
+*  Global leaderboard
+*  Personal performance dashboard
+*  Difficulty levels
+*  Quiz history
+*  Personalized quiz recommendations
+*  Dark mode
+*  Improved mobile experience
+*  Database integration for storing user results
 
 ---
 
-## 📊 Grading
+## 📚 Learning Outcomes
 
-| Score | Grade |
-|-------|-------|
-| 80–100% | A — Excellent! |
-| 60–79%  | B — Good Job! |
-| 40–59%  | C — Keep Practicing! |
-| 0–39%   | D — Needs Improvement |
+Through this project, I gained practical experience in:
+
+* Frontend web development
+* JavaScript programming
+* Node.js and Express.js
+* REST API development
+* Client-server architecture
+* Git and GitHub
+* Handling user input and quiz data
+* Implementing automatic score calculation
 
 ---
 
-## 🛠 Tech Stack
+## 👩‍💻 Author
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | HTML5, CSS3, Vanilla JS (ES6+) |
-| Backend | Node.js built-in `http` module |
-| Fonts | Syne + DM Sans (Google Fonts) |
-| Dependencies | **None** |
+**Mahee**
+
+BCA (AI & Data Science) Student
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving the repository a ⭐ on GitHub!
